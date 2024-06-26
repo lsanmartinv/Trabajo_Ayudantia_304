@@ -1,0 +1,29 @@
+body {
+    background-color: #131313;
+    color: #fff;
+}
+
+input:disabled {
+    background-color: #3a3a3a !important;
+}
+
+select:disabled {
+    background-color: #3a3a3a !important;
+
+}
+
+#cuota_texto {
+    color: #fff;
+}
+
+#cuota {
+    color: #1deb02;
+}
+
+#interes {
+    color: #1deb02;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préstamo_Registrar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="d-flex justify-content-center mt-5" style="height: 100px;">
+        <h1>Préstamo para empleados</h1>
+    </div>
+
+    <div class="container d-flex justify-content-center border" style="width: 60%;">
+        <form class="mt-4 mb-5" style="width: 80%;">
+            <!-- RUT del Empleado al centro -->
+            <div class="mb-5 text-center">
+                <label for="rut_label" class="form-label me-2">RUT: </label>
+                <select id="empleados-lista" class="form-select" style="width: auto; display: inline-block;">
+                    <option selected>Seleccione el RUT</option>
+                </select>
+            </div>
+
+            <!-- Fila para los otros elementos -->
+            <div class="row">
+                <!-- Tipo de Préstamo -->
+                <div class="col">
+                    <label for="tipo_prestamos_label" class="form-label">Tipo de Préstamo</label>
+                    <select id="prestamos-lista" class="form-select">
+                        <option selected>Seleccione un Préstamo</option>
+                    </select>
+                    <div>Cuotas máxima permitida: <span id="cuota"></span></div>
+                    <div>Tasa de interés Anual: <span id="interes"></span></div>
+                </div>
+
+                <!-- Monto del Préstamo -->
+                <div class="col">
+                    <label for="monto_prestamo" class="form-label">Monto del Préstamo</label>
+                    <input type="text" class="form-control" id="monto_prestamo" disabled>
+                </div>
+
+                <!-- Numeros de Cuotas -->
+                <div class="col">
+                    <label for="numero_cuotas" class="form-label">Numero de Cuotas</label>
+                    <input type="text" class="form-control" id="numero_cuotas" disabled>
+                    <div id="alerta_cuota" class="alert alert-warning" role="alert" style="display: none;">
+                        El numero de Cuotas es mayor al permitido
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boton -->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-primary me-md-2" disabled>Aceptar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
