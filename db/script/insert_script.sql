@@ -1,5 +1,5 @@
 -- Insertar un nuevo prestamo
-INSERT INTO prestamo (rut, tipo_prestamo_id, monto, monto_total, fecha_otorgacion, fecha_finalizacion, estado_prestamos)
+INSERT INTO prestamo (rut, tipo_prestamo_id, monto, monto_total, fecha_otorgacion, fecha_finalizacion, estado_prestamo)
 VALUES (?, ?, ?, ?, ?, ?, ?);
 
 -- Insertar cuotas
