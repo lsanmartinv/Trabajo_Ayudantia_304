@@ -1,0 +1,19 @@
+services:
+  mysqldb:
+    image: mysql:5.7.44
+    container_name: mysqldb_5.7.44
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ayudantia
+    ports:
+      - "3400:3306"
+
+  app:
+    build: .
+    container_name: trabajo_ayudantia
+    depends_on:
+      - mysqldb
+    links:
+      - mysqldb
+    ports:
+      - "4000:2000"
