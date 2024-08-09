@@ -11,6 +11,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/test_db', async (req, res) => {
+  const result = await db.query('SELECT NOW();');
+  res.send(result[0]);
+});
 
 app.get('/empleados', async (req, res) => {
   console.log('Usuario accediendo a la ruta /empleados');
